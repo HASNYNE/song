@@ -1,0 +1,251 @@
+/* Global settings */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header styling */
+.header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 4.5em;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #ff00ab,
+        0 0 10px #ff00ab, 
+        0 0 15px #00ffc6, 
+        0 0 20px #00ffc6;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Search bar styling */
+.search-bar {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px 10px 10px 40px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #1e1e1e;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 8.5%;
+    top: 32%;
+    transform: translateY(-50%);
+    color: #00ffc6;
+    font-size: 1.2em;
+    pointer-events: none;
+}
+
+/* Gallery container */
+.gallery {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    margin: 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey; /* Add a grey line after each song */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 255, 198, 0.7);
+}
+
+/* Video list styling */
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    position: relative;
+    text-shadow: 
+        0 0 5px #ff00ab,
+        0 0 10px #ff00ab, 
+        0 0 15px #00ffc6, 
+        0 0 20px #00ffc6;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: #00ffc6;
+    text-shadow: 
+        0 0 10px #ff00ab,
+        0 0 20px #ff00ab,
+        0 0 25px #00ffc6,
+        0 0 30px #00ffc6;
+}
+
+a i.fa-star {
+    margin-left: 20px;
+    color: #ffc107;
+}
+
+.rating {
+    margin-left: 5px;
+    color: #ffc107;
+    font-weight: 600;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #252540;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 2px solid #00ffc6;
+}
+
+.modal-content video {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.close:hover {
+    color: #ff5757;
+}
+
+/* Autoplay toggle styling */
+.autoplay-toggle {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ff00ab;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.autoplay-toggle i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.autoplay-toggle:hover {
+    color: #00ffc6;
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 3em;
+    }
+
+    .search-bar input {
+        width: 90%;
+        font-size: 1.1em;
+    }
+
+    a {
+        font-size: 1.2em;
+    }
+
+    .modal-content video {
+        max-width: 100%;
+    }
+
+    .gallery {
+        padding: 10px;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 8px;
+        font-size: 1em;
+    }
+
+    a {
+        font-size: 1em;
+    }
+
+    .autoplay-toggle {
+        font-size: 1em;
+    }
+}
